@@ -30,14 +30,21 @@ namespace TestProject
             employeesListToBeAddedToDB.Add(new EmployeePayroll { name = "Suhas", salary = 38000, startdate = DateTime.Now, phone = 7648652952, address = "Shivamoga", BasicPay =36000 , Deductions = 1000, TaxablePay = 500, IncomeTax = 500, NetPay = 35000, DepartmentID = 2  });
             employeesListToBeAddedToDB.Add(new EmployeePayroll { name = "Sanath", salary = 35000, startdate = DateTime.Now, phone = 8899775684, address = "Udupi", BasicPay = 33000, Deductions = 1000, TaxablePay = 500, IncomeTax = 500, NetPay = 31000, DepartmentID =   3});
 
-            DateTime startDateTime = DateTime.Now;
-            Console.WriteLine($"Data Addition to DB started on {startDateTime}");
-            employeePayrollOperations.AddEmployeeToPayroll(employeesListToBeAddedToDB);
+            //DateTime startDateTime = DateTime.Now;
+            //Console.WriteLine($"Data Addition to DB started on {startDateTime}");
+            //employeePayrollOperations.AddEmployeeToPayroll(employeesListToBeAddedToDB);
 
-            DateTime endDateTime = DateTime.Now;
-            Console.WriteLine($"Data Addition to DB ended on {endDateTime}");
-            Console.WriteLine($"Time for Adding Data to DB is {endDateTime - startDateTime}");
-            Assert.Pass();
+            //DateTime endDateTime = DateTime.Now;
+            //Console.WriteLine($"Data Addition to DB ended on {endDateTime}");
+            //Console.WriteLine($"Time for Adding Data to DB is {endDateTime - startDateTime}");
+            //Assert.Pass();
+
+            DateTime startDateTime1 = DateTime.Now;
+            Console.WriteLine($"Data Addition to DB started on {startDateTime1}");
+            employeePayrollOperations.AddEmployeeToPayrollWithThread(employeesListToBeAddedToDB);
+            DateTime endDateTime1 = DateTime.Now;
+            Console.WriteLine($"Data Addition to DB ended on {endDateTime1}");
+            Console.WriteLine($"Time for Adding Data to DB is {endDateTime1 - startDateTime1}");
         }
     }
 }
