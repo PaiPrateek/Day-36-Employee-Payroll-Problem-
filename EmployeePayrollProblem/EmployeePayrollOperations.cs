@@ -102,5 +102,14 @@ namespace EmployeePayrollProblem
             });
             Console.WriteLine(this.employeePayroll.ToString());
         }
+
+        public void AddEmployeePayroll(EmployeePayroll emp)
+        {
+            employeePayroll.Add(emp);
+        }
+        public int EmployeeCount()
+        {
+            return this.employeePayroll.Count();
+        }
     }
 }

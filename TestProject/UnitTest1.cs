@@ -45,6 +45,7 @@ namespace TestProject
             DateTime endDateTime1 = DateTime.Now;
             Console.WriteLine($"Data Addition to DB ended on {endDateTime1}");
             Console.WriteLine($"Time for Adding Data to DB is {endDateTime1 - startDateTime1}");
+
         }
     }
 }
